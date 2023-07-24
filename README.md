@@ -46,10 +46,11 @@ The challenge was to create a web application that could get data from an API us
 ### Screenshot 📷 
 Here is a screenshot of the project's interface:
 
-***Vista destokp***
+***desktop view***
 ![Alt text](./src/assets/image.png)
 
-***Vista destokp***
+***mobile view***
+
 ![Alt text](./src/assets/image1.png)
 
 
