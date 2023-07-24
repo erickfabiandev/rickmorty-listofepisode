@@ -1,0 +1,79 @@
+@use '../style/variables.scss';
+.listEpisode{
+  padding: 0.5rem 0;
+  height: 400px;
+  overflow:auto;
+
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: variables.$color-green-ligth; 
+    border-radius: 10px;
+  }
+ 
+  &__episode{    
+    &__heard{
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      padding: 0.5rem;
+      .heard--text{    
+        font-family: variables.$font-creepster;
+        color: variables.$color-green-ligth;
+        font-size:18px;
+      }
+      .heard--button{
+        color:variables.$color-green;
+      }
+    }
+
+    &__body{
+      display: flex;
+      flex-direction: column;
+      color: variables.$color-gray-2;
+      font-family: variables.$font-poppins;
+      font-size: 14px;
+      padding-left: 2.5rem;
+      h3{
+        color: variables.$color-gray;
+        font-weight: bold;
+      }
+      p{
+        color: variables.$color-gray-2;
+        font-weight: 300;
+        padding-left: 1.2rem;
+      }
+      .body_character{
+        padding-left: 1.2rem;
+      }
+    }
+  } 
+
+  
+}
+
+@media (min-width:1024px) {
+  .listEpisode{
+    padding: 2rem;
+  }
+  
+}
+
+
+
+.novisible{
+  display: none;
+}
+.heard--button{
+  &:hover{
+    cursor: pointer;
+  }
+}

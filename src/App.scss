@@ -1,0 +1,78 @@
+@use './style/variables';
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 1rem;  
+  background-image: url('https://res.cloudinary.com/dkddd5aky/image/upload/v1690190361/RickandMorty/backgorund_mobile.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: variables.$color-black;
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+  
+  &:before{
+    content: ' ';
+    position: absolute;
+    z-index: -1;
+    top:0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.9);
+  }
+
+  &__subtitle, &__title {
+    font-family: variables.$font-creepster;
+    color: variables.$color-green-ligth;
+    -webkit-text-stroke:2px variables.$color-black;
+    text-shadow: 2px 2px 0px variables.$color-green;    
+    font-size: 45px;
+  }
+  &__body{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 2rem;
+    width: 100%;
+    &--img{
+      display: none;
+    }
+  }
+  &__footer{
+    width: 100%;
+    text-align: center;
+    font-family: variables.$font-permanent-marker;
+    color: variables.$color-gray;
+    a{
+      color: variables.$color-gray-2;
+    }
+  }
+}
+
+@media (min-width:1024px) {
+  .container{    
+    padding: 3rem 1rem; 
+    background-image: url('');
+
+    &__body{
+      &--img{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-inline: 5rem;
+        height: 500px;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)),url('https://res.cloudinary.com/dkddd5aky/image/upload/v1689883498/RickandMorty/background_desktop.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+    }
+    &__title {    
+      font-size: 70px;
+    }
+  }
+  
+}

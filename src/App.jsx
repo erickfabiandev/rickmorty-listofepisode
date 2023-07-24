@@ -1,34 +1,24 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import ListEpisode from './ListEpisode/ListEpisode'
+import './App.scss'
+
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className='container'>
+      <h2 className='container__subtitle'>LIST OF EPISODE</h2>
+      <h1 className='container__title'>RICK AND MORTY</h1>
+      <section className='container__body'>
+        <img
+        className='container__body--img' 
+        src='https://res.cloudinary.com/dkddd5aky/image/upload/v1689883498/RickandMorty/rickandmorty_desktop.png' 
+        alt='rickandmorty'/>
+        <ListEpisode/>
+      </section>
+      <footer className='container__footer'>
+        <p>Create by <a href='https://erickfabiandev.com/'> erickfabiandev </a></p>
+      </footer>   
+    </div >
   )
 }
 
