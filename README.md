@@ -53,6 +53,10 @@ Here is a screenshot of the project's interface:
 
 ![Alt text](./src/assets/image1.png)
 
+***Functionality : Select a character from the list and show detailed information**
+
+![Alt text](./src/assets/image2.png)
+
 
 ## My Process :mountain:
 
