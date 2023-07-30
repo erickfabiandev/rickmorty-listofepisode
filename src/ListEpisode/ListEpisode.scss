@@ -53,6 +53,10 @@
       }
       .body_character{
         padding-left: 1.2rem;
+        &:hover{
+          cursor: pointer;
+          color:variables.$color-green;
+        }
       }
     }
   } 
@@ -67,11 +71,10 @@
   
 }
 
-
-
 .novisible{
   display: none;
 }
+
 .heard--button{
   &:hover{
     cursor: pointer;

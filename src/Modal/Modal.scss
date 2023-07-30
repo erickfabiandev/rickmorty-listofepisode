@@ -1,0 +1,66 @@
+@use '../style/variables.scss';
+.modal{
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  background: rgba(0, 0, 0 ,0.8);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__card{
+    backdrop-filter: blur(20px);
+    background: hsla(0,0%,100%,.73);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    position: relative;
+    &__name{
+      text-align: center;
+      font-size: 30px;      
+      font-family: variables.$font-creepster;
+      color: variables.$color-green-ligth;
+      -webkit-text-stroke:1px variables.$color-black;
+      text-shadow: 2px 2px 0px variables.$color-green;
+      padding: 1rem;
+    }
+    &__closed{
+      position: absolute;
+      left: 85%;
+      cursor: pointer;
+      &:hover{
+        color: variables.$color-green-ligth;
+      }
+    }
+    &_content{
+      &__img{
+        //border: solid 2px;
+        border-radius: 39% 61% 69% 31% / 48% 33% 67% 52% ;
+        //border-color: variables.$color-green;        
+        box-shadow: rgba(10, 10, 10, 0.558) 0px 7px 29px 0px;
+      }
+      &__description{
+        padding-left: 1rem;
+        padding-top: 1rem;
+        .category{
+          font-size: 18px;
+          font-family: variables.$font-creepster;
+          color:variables.$color-green-ligth;          
+         -webkit-text-stroke:0.8px variables.$color-black;
+         padding: 0.1rem;        
+        }
+        .description{
+          padding-left: 0.5rem;
+          font-family: variables.$font-poppins;
+          color:variables.$color-black;
+          font-size: 14px;
+          -webkit-text-stroke:0px;
+        }
+      }
+    }
+  }
+}
